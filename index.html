@@ -1,5 +1,13 @@
 <html>
-  <body>
-    <script type="text/javascript">Elm.Main.fullscreen()</script>
-  </body>
+<div id="main"></div>
+<footer>
+  <a href="www.linkedin.com/marchanley">LinkedIn</a>
+</footer>
+<script src="Main.js"></script>
+<script>
+    var node = document.getElementById('main');
+    var app = Elm.Main.embed(node);
+    // Note: if your Elm module is named "MyThing.Root" you
+    // would call "Elm.MyThing.Root.embed(node)" instead.
+</script>
 </html>
