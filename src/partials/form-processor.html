@@ -1,0 +1,35 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#{{form.id}}").submit(function (event) {
+            event.preventDefault();
+
+            var FORM_NAME = "{{form.name}}"
+
+            if (typeof ga !== 'undefined') {
+                ga('send', 'event', 'Form', 'submit', FORM_NAME);
+            }
+
+            var data = {};
+
+            $.each($(this).serializeArray(), function() {
+                data[this.name] = this.value;
+            });
+
+            data['domain'] = document.domain;
+            data['form'] = FORM_NAME;
+
+
+            $.ajax({
+                url: 'https://f6au0lcarj.execute-api.us-west-2.amazonaws.com/live/simple-form',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function() {
+                    window.location.replace("/");
+                }
+            });
+        })
+    });
+</script>

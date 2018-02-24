@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.min.css">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="canonical" href="8DF7_CANON_REF_LINK" />
+    {% block meta %}{% endblock %}
+    {% include "common-sd.html" %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<main id="{% block page_id %}{% endblock %}">
+    {% block body %}
+    {% endblock %}
+</main>
+</body>
+</html>

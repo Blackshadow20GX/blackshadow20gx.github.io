@@ -1,0 +1,28 @@
+.jumbotron {
+  background: $text-color;
+  width: 100%;
+  height: 50%;
+  display: block;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  z-index: -1;
+
+  text-align: center;
+  padding: 175px 0;
+  @media #{$mobile} {
+    padding: 100px 0;
+  }
+  p {
+    max-width: $page-width-max;
+    width: $page-width-dynamic;
+    margin: 1em auto;
+  }
+  img{
+    max-width: 50%;
+    max-height: 50%;
+  }
+  h1, h2, h3, h4, h5, h6, p, a {
+    color: $color-secondary-tint-5;
+  }
+}

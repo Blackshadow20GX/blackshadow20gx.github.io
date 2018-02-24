@@ -1,0 +1,32 @@
+footer {
+  @extend .full-width-breakable;
+  margin-top: 1em;
+  a {
+    font-size: smaller;
+  }
+  ul {
+    @extend .flat-list;
+  }
+  .copyright {
+    text-align: center;
+    font-size: small;
+    margin: 2em;
+  }
+}
+#core-brands{
+  ul{
+    width:100%
+  }
+  li{
+    width:25%;
+    margin:0px;
+    text-align: center;
+    @media #{$mobile}{
+      width:90%;
+      margin:5%;
+    }
+  }
+}
+#footer-links{
+  text-align: center;
+}

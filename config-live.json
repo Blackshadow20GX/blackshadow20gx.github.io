@@ -1,0 +1,13 @@
+{
+	"publish":{
+		"s3_bucket" : "example-bucket.com",
+		"metadata": {
+			"Cache-Control": "max-age=2592000"
+		},
+		"output" : "dist/**/*"
+	},
+	"site":{
+		"url" : "https://example.com",
+		"google_analytics_uid" : "UA-XXXXXXXX-1"
+	}
+}

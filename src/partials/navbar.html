@@ -1,0 +1,28 @@
+<nav>
+    <!--<div class="logo"><a href="/"><img src="/ui/logo.image" height="70px" alt="Logo"></a></div>-->
+    <div class="inner">
+        <ul id="menu">
+            <li class="nav-left"><a href="/">Link One</a></li>
+            <li class="nav-left"><a href="/">Link Two</a></li>
+            <li class="nav-right"><a href="/">Link Three</a></li>
+            <li class="nav-right"><a href="/">Link Four</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="nav-ghost"></div>
+
+<script>
+
+    var toggleMenu;
+    var menu;
+    var hidden;
+
+    window.onload = function() {
+        menu = document.getElementById('menu');
+        hidden = false;
+        toggleMenu = function (){
+            hidden = !hidden;
+            menu.className = hidden ? 'visible' : '';
+        }
+    };
+</script>

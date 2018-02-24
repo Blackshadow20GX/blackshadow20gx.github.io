@@ -1,0 +1,42 @@
+{
+  "source":{
+    "all" : "src/",
+    "styles" : "src/**/*.+(scss|sass|css)",
+    "pages" : "src/pages/**/*.html",
+    "partials" : "src/partials/",
+    "assets" :  "src/assets"
+  },
+  "destination" :{
+    "all" : "dist/",
+    "output" : "dist/**/*"
+  },
+  "styles":{
+    "source":"src/**/*.+(scss|sass|css)",
+    "destination":"dist/"
+  },
+  "assets":{
+    "source":"src/assets/**",
+    "destination":"dist/"
+  },
+  "pages":{
+    "root" : "home",
+    "source":["src/pages/**.html","src/special/**.html"],
+    "destination":"dist/",
+    "partials_path" : "src/partials/",
+    "special_path" : "src/special/",
+    "canonical_placeholder" : "8DF7_CANON_REF_LINK",
+    "sitemap_include" : ["**", "!**/style-guide/index.html","!**/404.html"],
+    "pretty_url_include" : [ "**", "!**/404.html"]
+  },
+  "site":{
+    "url" : "http://localhost:3000",
+    "google_analytics_uid" : "UA-XXXXXXXX-1"
+  },
+  "publish":{
+    "s3_bucket" : "",
+    "metadata": {
+      "Cache-Control": "max-age=2592000"
+    },
+    "output" : "dist/**/*"
+  }
+}
